@@ -16,8 +16,9 @@
     align-items: center;
 }
 
-.primary-color{
+.primary_flex{
     background-color: #15132a;
+    display: flex;
 }
 
 button{
@@ -29,6 +30,18 @@ button{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 2px;
+}
+
+button:hover .fas{
+    color: #000;
+    transition: all 0.4s;
+}
+
+section article{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
 }
 
 /* header starts here */
@@ -76,11 +89,6 @@ nav ul li a:hover{
 /* header ends here*/
 
 /* Banner section starts */
-section article{
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-}
 
 .text-part{
     width: 40%;
@@ -91,6 +99,10 @@ section article{
     font-size: 64px;
     color: #fff;
     font-weight: 700;
+}
+
+.text-part span{
+    color: red;
 }
 
 .text-part i{
@@ -114,7 +126,7 @@ section article{
 .players-section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-content: center;
+    align-content: center;  
     justify-self: center;
     padding: 50px 11rem;
 }
@@ -148,8 +160,9 @@ section article{
 }
 
 /* Players section ends */
+
 /* highlight-section starts*/
-section #two{
+#highlight_article{
     display: flex;
     justify-content: space-evenly;
     margin:130px 0 0 3rem;
@@ -160,14 +173,40 @@ section #two{
     font-weight: 700;
 }
 
-#two .text-part{
+#highlight_article .text-part{
     width: 470px;
+    position: relative;
 }
-#two button{
+
+#highlight_article button{
     margin-top: 20px;
 }
-/* highlight-section ends */
+/* Form added here */
+form{
+    position: absolute;
+    top: 300px;
+    right: 0;
+    width: 60%;
+}
 
+form select{
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    box-shadow: 2px 2px 10px #ddd;
+    font-size: 18px;
+    color: gray;
+}
+
+#hover-img:hover{
+    transform: scale(1.05);
+    filter:grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* footer starts */
 footer{
     display: flex;
     justify-content: center;
@@ -188,9 +227,86 @@ footer{
 
 .social-link i:hover{
     transform: scale(2);
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 footer p{
     margin: 20px 0;
 }
+/* footer ends */
+
+/* media query for mobile */
+
+@media only screen and (max-width: 600px){
+    .primary_flex{
+        flex-direction: column;
+    }
+    #highlight_article{
+        flex-direction: column;
+        margin: 100px 0 0 0;
+    }
+    
+    .text-part{
+        width: 70%;
+        margin: 3rem 0 3rem ;
+    }
+
+    .text-part h1{
+        font-size: 24px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .img-part{
+        width: 300px;
+        height: 400px;
+    }
+
+    .text-part #heading{
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    #highlight_article .text-part{
+        width: 70%;
+        margin: 2rem 0 3rem;
+        position: relative;
+    }
+
+    .card{
+        margin-left: 4.3rem;
+        transform: scale(1.3);
+    }
+
+    .img-part img{
+        width: 300px;
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .players-section{
+        grid-template-columns: 1fr;
+        grid-row-gap:10rem;
+        padding: 50px 1rem;
+    }
+
+    .img-part img {
+        width: 300px;
+        transform: scale(1.4);
+    }
+
+    form{
+        width: 100px;
+    }
+
+    footer{
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+/* For mobile phones:for small device */ 
+
