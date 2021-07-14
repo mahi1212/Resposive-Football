@@ -11,7 +11,6 @@
 
 .container{
     display: flex;
-    width: min(90%, 75rem);
     justify-content: space-between;
     align-items: center;
 }
@@ -128,7 +127,7 @@ nav ul li a:hover{
     grid-template-columns: repeat(3, 1fr);
     align-content: center;  
     justify-self: center;
-    padding: 50px 11rem;
+    padding: 50px 10rem;
 }
 
 .card{
@@ -235,17 +234,54 @@ footer p{
 }
 /* footer ends */
 
-/* media query for mobile */
-
-@media only screen and (max-width: 600px){
+/* media query for tablet */
+@media only screen and (max-width: 879px) {
     .primary_flex{
         flex-direction: column;
     }
+
+    .text-part{
+        width: 70%;
+        margin: 3rem 0 0;
+    }
+
+    .img-part img {
+        width: 570px;
+        padding: 2rem;
+    }
+
+    .players-section{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap:2rem;
+        padding: 2rem 0.1rem;
+    }
+    
+
+    
+
     #highlight_article{
         flex-direction: column;
         margin: 100px 0 0 0;
     }
+    .card{
+        transform: scale(1.3);
+        height: 600px;
+        margin: 50px 10px;
+    }
+
+    .card-body{
+        margin: 0 20px;
+    }
     
+    form{
+        width: 100px;
+    }
+
+}
+
+/* media query for mobile */
+
+@media only screen and (max-width: 600px){
     .text-part{
         width: 70%;
         margin: 3rem 0 3rem ;
@@ -267,46 +303,61 @@ footer p{
         font-weight: 700;
     }
 
-    #highlight_article .text-part{
-        width: 70%;
-        margin: 2rem 0 3rem;
-        position: relative;
-    }
-
-    .card{
-        margin-left: 4.3rem;
-        transform: scale(1.3);
-    }
-
     .img-part img{
         width: 300px;
         height: 250px;
         margin-top: 30px;
     }
 
+    .img-part img {
+        width: 250px;
+        transform: scale(1.4);
+    }
+
     .players-section{
         grid-template-columns: 1fr;
         grid-row-gap:10rem;
         padding: 50px 1rem;
+        margin-top: 26px;
+    }
+    
+    .card{
+        transform: scale(1.3);
+        width: 300px;
+        height: 550px;
+        margin: 26px 10px;
     }
 
-    .img-part img {
-        width: 300px;
-        transform: scale(1.4);
+    .card-img img{
+        width: 270px;
+    }
+
+    .card-body{
+        padding: 0rem;
+    }
+
+    .primary_flex{
+        flex-direction: column;
+    }
+
+    #highlight_article{
+        flex-direction: column;
+        margin: 100px 0 0 0;
+    }
+
+    #highlight_article .text-part{
+        width: 70%;
+        margin: 2rem 0 3rem;
+        position: relative;
     }
 
     form{
         width: 100px;
+        right: -10px;
     }
 
-    footer{
-        width:100%;
+    .footer-logo img{
+        width:300px;
     }
 }
-
-@media only screen and (min-width: 768px){
-
-}
-
-/* For mobile phones:for small device */ 
 
