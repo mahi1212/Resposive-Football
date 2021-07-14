@@ -63,11 +63,12 @@ nav ul li a{
 
 .btn i{
     font-size: 24px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 /* header ends here*/
 /* main starts here */
 
+/* Banner section starts */
 section article{
     display: flex;
     justify-content:flex-end;
@@ -87,7 +88,7 @@ section article{
 
 .text-part i{
     font-size: 24px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .img-part{
@@ -100,4 +101,47 @@ section article{
     height: 450px;
     margin-top: 30px;
 }
+
+/* Banner section ends */
+/* Players section starts */
+.players-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-self: center;
+    padding: 50px 10rem;
+}
+
+.card{
+    width: 330px;
+    height: 474px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    margin: 27px 5px;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card img{
+    width: 300px;
+    height: 256px;
+}
+
+.card h1{
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.text-muted{
+    font-size: 16px;
+    color: gray;
+}
+
+/* Banner section ends */
+
+
+
 
